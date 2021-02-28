@@ -60,6 +60,8 @@ php artisan migrate:fresh # 全てのテーブルを削除してから、マイ�
 php artisan migrate:fresh --seed
 ```
 
+* freshするとBatchが初期化される
+
 ### schema:dump
 
 肥大化するmigrationファイル、処理をschemaフォルダのdumpファイルに移しておくことで、
@@ -73,4 +75,49 @@ php artisan migrate:fresh --seed
 ```
 php artisan schema:dump
 php artisan schema:dump --prune
+```
+
+## Eloquent ORM (Object Relational Mapping)
+
+データベースから取得したデータをオブジェクトとして扱える
+
+```
+php artisan make:model Models/User
+```
+
+## route
+
+```
+php artisan make:controller BlogController
+```
+
+```
+routes/web.php
+ -> app/Http/Contorollers/~.php
+ -> resources/view/~.blade.php
+```
+
+## Bootstrap 導入
+
+```
+composer require laravel/ui
+php artisan ui bootstrap
+npm install
+npm run dev # 初回エラーするかも？
+```
+
+* インストールが完了すると、以下のファイルに書き込まれる
+  * public/css/app.css
+  * public/js/app.js
+
+## seeder/factory
+
+```
+php artisan make:seeder クラス名
+php artisan make:factory クラス名
+```
+
+```
+php artisan db:seed ## デフォルトのDatabaseSeederクラスのみ
+php artisan db:seed --class=クラス名
 ```
