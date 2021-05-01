@@ -1,5 +1,8 @@
 # laravel8_learning
 
+* https://laravel.com/docs/8.x
+* https://readouble.com/
+
 ## versions
 
 ```sail-8.0/app
@@ -120,4 +123,18 @@ php artisan make:factory クラス名
 ```
 php artisan db:seed ## デフォルトのDatabaseSeederクラスのみ
 php artisan db:seed --class=クラス名
+```
+
+## Request
+
+```
+php artisan make:request BlogRequest
+```
+
+[validationの日本語化](https://readouble.com/laravel/8.x/ja/validation-php.html)
+
+```
+php -r "copy('https://readouble.com/laravel/8.x/ja/install-ja-lang-files.php', 'install-ja-lang.php');"
+php -f install-ja-lang.php
+php -r "unlink('install-ja-lang.php');"
 ```
